@@ -1,4 +1,9 @@
 
+function clearDisplay() {
+   while(repositoryDisplay.children.length > 0) {
+      repositoryDisplay.lastElementChild.remove();
+   }
+}
 
 export function makeRepoLI(repository) {
    const html = /*html*/`
@@ -13,3 +18,12 @@ export function makeRepoLI(repository) {
    template.innerHTML = html;
    return template.content;
 }
+const repositoryDisplay = document.getElementById('repository-display');
+export default function loadDisplay(listOfRepos) {
+   clearDisplay();
+   listOfRepos.forEach(repository => {
+      const dom = makeRepoLI(repository);
+      repositoryDisplay.appendChild(dom);
+   });
+}
+

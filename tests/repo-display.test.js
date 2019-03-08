@@ -4,7 +4,6 @@ const test = QUnit.test;
 QUnit.module('Creating LI Templates');
 
 
-
 test('create li template when passed repository object', assert => {
    //Arrange
    const expected = /*html*/`
