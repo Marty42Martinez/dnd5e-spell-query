@@ -8,13 +8,21 @@
 </head>
 <body>
   <header>
-    <h1>Marty's Portfolio</h1>
+    <h1>GitHub Portfolii </h1>
+    <a href="index.html">Reset</a>
   </header>
   <main>
     <form id="search-form">
       <input type="text" placeholder="Search for GitHub user">
       <button>Search</button>
     </form>
+
+    <section id="pagination">
+      <button id="previous-button">&lt;&lt;Previous</button>
+      <span>Page <span id="current-page"></span> of <span id="total-pages"></span> </span>
+      <button id="next-button">Next&gt;&gt;</button>
+    </section>
+    
     <ul id="repository-display"></ul>
   </main>
 

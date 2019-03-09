@@ -1,10 +1,8 @@
-import data from '../data/repo-data.js';
+// import data from '../data/repo-data.js';
 import loadDisplay from './display-component.js';
 import './search-component.js';
 import { readFromHash } from './hash-query.js';
 import { createURL } from './build-gh-url.js';
-
-// loadDisplay(data);
 
 window.addEventListener('hashchange', () => {
    const query = window.location.hash.slice(1);
